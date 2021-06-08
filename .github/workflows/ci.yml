@@ -1,0 +1,9 @@
+name: ci
+on: push
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: UnitTest
+        run: ./gradlew testDebugUnitTest

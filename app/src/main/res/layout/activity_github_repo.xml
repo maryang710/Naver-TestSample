@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ownerImage"
+        android:layout_width="@dimen/owner_avatar_width"
+        android:layout_height="@dimen/owner_avatar_width"
+        android:layout_marginStart="@dimen/spacing_500"
+        android:layout_marginTop="@dimen/spacing_600"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ownerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_300"
+        android:textSize="@dimen/font_500"
+        app:layout_constraintEnd_toStartOf="@id/star"
+        app:layout_constraintStart_toStartOf="@id/ownerImage"
+        app:layout_constraintTop_toBottomOf="@id/ownerImage"
+        tools:text="Owner Name" />
+
+    <ImageView
+        android:id="@+id/star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="@dimen/spacing_500"
+        android:src="@drawable/baseline_star_border_24"
+        app:layout_constraintBottom_toBottomOf="@id/ownerName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ownerName" />
+
+    <TextView
+        android:id="@+id/starCountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_500"
+        android:layout_marginTop="@dimen/spacing_400"
+        android:text="Stars"
+        android:textSize="@dimen/font_300"
+        app:layout_constraintEnd_toStartOf="@id/watcherCountLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ownerName" />
+
+    <TextView
+        android:id="@+id/watcherCountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watchers"
+        android:textSize="@dimen/font_300"
+        app:layout_constraintEnd_toStartOf="@id/forkCountLabel"
+        app:layout_constraintStart_toEndOf="@id/starCountLabel"
+        app:layout_constraintTop_toTopOf="@+id/starCountLabel" />
+
+    <TextView
+        android:id="@+id/forkCountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_500"
+        android:text="Forks"
+        android:textSize="@dimen/font_300"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/watcherCountLabel"
+        app:layout_constraintTop_toTopOf="@+id/starCountLabel" />
+
+    <TextView
+        android:id="@+id/starCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_500"
+        app:layout_constraintEnd_toEndOf="@id/starCountLabel"
+        app:layout_constraintStart_toStartOf="@id/starCountLabel"
+        app:layout_constraintTop_toBottomOf="@+id/starCountLabel"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/watcherCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_500"
+        app:layout_constraintEnd_toEndOf="@id/watcherCountLabel"
+        app:layout_constraintStart_toStartOf="@id/watcherCountLabel"
+        app:layout_constraintTop_toBottomOf="@+id/watcherCountLabel"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/forksCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_500"
+        app:layout_constraintEnd_toEndOf="@id/forkCountLabel"
+        app:layout_constraintStart_toStartOf="@id/forkCountLabel"
+        app:layout_constraintTop_toBottomOf="@+id/forkCountLabel"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/issueLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_500"
+        android:text="Issues"
+        android:textSize="@dimen/font_500"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/ownerImage"
+        app:layout_constraintTop_toBottomOf="@+id/starCount" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/issues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/spacing_400"
+        android:paddingBottom="@dimen/spacing_400"
+        app:layout_constraintTop_toBottomOf="@+id/issueLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

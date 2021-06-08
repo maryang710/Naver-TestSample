@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_25">1dp</dimen>
+    <dimen name="spacing_50">2dp</dimen>
+    <dimen name="spacing_75">3dp</dimen>
+    <dimen name="spacing_100">4dp</dimen>
+    <dimen name="spacing_125">5dp</dimen>
+    <dimen name="spacing_150">6dp</dimen>
+    <dimen name="spacing_200">8dp</dimen>
+    <dimen name="spacing_225">9dp</dimen>
+    <dimen name="spacing_250">10dp</dimen>
+    <dimen name="spacing_275">11dp</dimen>
+    <dimen name="spacing_300">12dp</dimen>
+    <dimen name="spacing_350">14dp</dimen>
+    <dimen name="spacing_375">15dp</dimen>
+    <dimen name="spacing_400">16dp</dimen>
+    <dimen name="spacing_450">18dp</dimen>
+    <dimen name="spacing_500">20dp</dimen>
+    <dimen name="spacing_525">21dp</dimen>
+    <dimen name="spacing_550">22dp</dimen>
+    <dimen name="spacing_600">24dp</dimen>
+    <dimen name="spacing_625">26dp</dimen>
+    <dimen name="spacing_650">28dp</dimen>
+    <dimen name="spacing_675">30dp</dimen>
+    <dimen name="spacing_700">32dp</dimen>
+    <dimen name="spacing_750">36dp</dimen>
+    <dimen name="spacing_775">40dp</dimen>
+    <dimen name="spacing_800">42dp</dimen>
+    <dimen name="spacing_900">48dp</dimen>
+    <dimen name="spacing_950">52dp</dimen>
+    <dimen name="spacing_1000">56dp</dimen>
+    <dimen name="spacing_1050">60dp</dimen>
+    <dimen name="spacing_1100">64dp</dimen>
+    <dimen name="spacing_1200">72dp</dimen>
+    <dimen name="spacing_1300">80dp</dimen>
+    <dimen name="spacing_1400">100dp</dimen>
+    <dimen name="spacing_1500">120dp</dimen>
+
+    <dimen name="font_100">8sp</dimen>
+    <dimen name="font_150">10sp</dimen>
+    <dimen name="font_200">12sp</dimen>
+    <dimen name="font_225">13sp</dimen>
+    <dimen name="font_250">14sp</dimen>
+    <dimen name="font_300">16sp</dimen>
+    <dimen name="font_400">18sp</dimen>
+    <dimen name="font_450">19sp</dimen>
+    <dimen name="font_500">20sp</dimen>
+    <dimen name="font_550">22sp</dimen>
+    <dimen name="font_600">24sp</dimen>
+    <dimen name="font_650">26sp</dimen>
+    <dimen name="font_700">28sp</dimen>
+    <dimen name="font_750">30sp</dimen>
+    <dimen name="font_800">34sp</dimen>
+    <dimen name="font_900">40sp</dimen>
+
+    <dimen name="owner_avatar_width">54dp</dimen>
+</resources>
