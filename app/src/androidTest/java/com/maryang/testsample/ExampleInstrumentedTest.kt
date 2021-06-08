@@ -19,5 +19,8 @@ class ExampleInstrumentedTest {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.maryang.testsample", appContext.packageName)
+
+        // DB 객체라던가, Preference 객체라던가, Retrofit 이라던가 GLide 라던가 등등
+        // App Context로도 할수 있으니, 이렇게 가져와서 테스트 가능
     }
 }

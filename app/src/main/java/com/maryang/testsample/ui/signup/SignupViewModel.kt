@@ -16,6 +16,7 @@ class SignupViewModel(
     private val schedulerProvider: SchedulerProviderInterface = SchedulerProvider()
 ) : BaseViewModel() {
 
+    // ViewModel 에서는 State가 검증해야하는 대상이
     val check1State = BehaviorSubject.createDefault(false)
     val check2State = BehaviorSubject.createDefault(false)
     val check3State = BehaviorSubject.createDefault(false)
@@ -37,8 +38,8 @@ class SignupViewModel(
 
     fun signup() {
         loadingState.onNext(true)
-        userRepository.signup()
-            .subscribeOn(schedulerProvider.io())
+        userRepository.signup() // Mock 객체의 UserRepository는 signup()이 아무것도 안한다.
+            .subscribeOn(schedulerProvider.io()) // test scheduelrs면 여기서 그냥 멈춘다.
             .observeOn(schedulerProvider.main())
             .subscribe(object : DefaultCompletableObserver() {
                 override fun onComplete() {

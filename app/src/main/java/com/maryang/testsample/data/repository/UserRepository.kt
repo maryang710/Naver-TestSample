@@ -7,4 +7,7 @@ class UserRepository {
 
     fun signup(): Completable =
         Completable.complete()
+
+    fun saveUser(): Completable =
+        Completable.complete()
 }
