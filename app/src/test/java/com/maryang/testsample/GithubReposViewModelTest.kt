@@ -10,11 +10,9 @@ import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.plugins.RxJavaPlugins
 import io.reactivex.rxjava3.schedulers.Schedulers
 import org.junit.Before
-import org.junit.Test
 import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.MockitoAnnotations
-import java.util.concurrent.TimeUnit
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -46,13 +44,5 @@ class GithubReposViewModelTest {
 
         viewModel = GithubReposViewModel(githubRepository, testSchedulerProvider)
         viewModel.onCreate()
-    }
-
-    @Test
-    fun searchTest() {
-        val observer = viewModel.reposState.test()
-        viewModel.searchGithubRepos(searchText) // 검증 하려는 메소드
-        testSchedulerProvider.testScheduler.advanceTimeBy(500, TimeUnit.MILLISECONDS)
-        observer.assertValue(repos)
     }
 }
